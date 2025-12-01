@@ -1,0 +1,559 @@
+---
+import BaseLayout from "../layouts/baselayout.astro";
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
+---
+
+<BaseLayout title="Projects - Rizqi Dewanto Portfolio">
+  <Navbar />
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <p class="section-label">» My Work</p>
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/public/project/project1.png" alt="Sistem Bebas Tanggungan" class="project-img" />
+            <!-- Fallback jika gambar belum ada -->
+            <div class="image-placeholder">
+              <p>PROJECT 1</p>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rizxqi"
+                  class="project-link"
+                  target="_blank"
+                  title="GitHub Repository"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Sistem Bebas Tanggungan</h3>
+            <div class="project-description">
+              <p>
+                A clearance management system for validating student obligations
+                before graduation, featuring automated verification, digital
+                document tracking, and approval workflows. Built with Laravel
+                and SQL Server to ensure accurate data processing and efficient
+                academic administration.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">HTML</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">php native</span>
+              <span class="tag">sql server</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/public/project/project2.png" alt="Point of Sales" class="project-img" />
+            <div class="image-placeholder">
+              <p>PROJECT 2</p>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rizxqi"
+                  class="project-link"
+                  target="_blank"
+                  title="GitHub Repository"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Point of Sales (POS)</h3>
+            <div class="project-description">
+              <p>
+                A Point of Sales system for managing daily transactions with
+                sales summaries, product management, and inventory tracking.
+                Built with Laravel using AdminLTE and Bootstrap for an intuitive
+                and responsive admin interface.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Mysql</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/public/project/project3.png" alt="TOEIC Registration" class="project-img" />
+            <div class="image-placeholder">
+              <p>PROJECT 3</p>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rizxqi"
+                  class="project-link"
+                  target="_blank"
+                  title="GitHub Repository"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>TOEIC Registration System</h3>
+            <div class="project-description">
+              <p>
+                A web-based registration platform for managing TOEIC exam
+                participants with automated validation, scheduling, and user
+                record handling. Features secure data processing using Laravel
+                and MySQL for efficient exam administration.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Vue.js</span>
+              <span class="tag">mysql</span>
+              <span class="tag">php</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/public/project/project4.png" alt="Portfolio Web" class="project-img" />
+            <div class="image-placeholder">
+              <p>PROJECT 4</p>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rizxqi"
+                  class="project-link"
+                  target="_blank"
+                  title="GitHub Repository"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Portofolio Web</h3>
+            <div class="project-description">
+              <p>
+                A personal portfolio website designed to showcase my projects,
+                skills, and professional background in one place. It features a
+                clean and responsive layout that works seamlessly across all
+                devices, enhanced with subtle animations and intuitive
+                navigation. The goal is to create a professional online presence
+                while making it easy for visitors to explore my work and get to
+                know my experience.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Astro</span>
+              <span class="tag">Html</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/public/project/project5.jpg" alt="Expense App" class="project-img" />
+            <div class="image-placeholder">
+              <p>PROJECT 5</p>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rizxqi"
+                  class="project-link"
+                  target="_blank"
+                  title="GitHub Repository"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Expense APP</h3>
+            <div class="project-description">
+              <p>
+                An Expense Tracking App built with Flutter, designed to help
+                users manage their daily finances more efficiently. The app
+                allows users to record expenses, categorize spending, view
+                statistics, and track financial habits through a clean and
+                intuitive interface. With features like category management,
+                real-time updates, and a responsive design, this application
+                provides a seamless user experience for organizing personal
+                budgets and improving financial awareness.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/public/project/project6.jpg" alt="Attendance System" class="project-img" />
+            <div class="image-placeholder">
+              <p>PROJECT 6</p>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a
+                  href="https://github.com/Rizxqi"
+                  class="project-link"
+                  target="_blank"
+                  title="GitHub Repository"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Attendance Information System</h3>
+            <div class="project-description">
+              <p>
+                A mobile Attendance Information System built with Flutter and
+                powered by a Laravel + Filament backend. The app enables
+                employees to check in/out, track attendance history, and submit
+                leave requests, while administrators manage users, monitor
+                records, and generate reports through a clean Filament
+                dashboard. Designed to make attendance tracking simpler, faster,
+                and more organized.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">mysql</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* Projects Section */
+  .projects {
+    padding: 100px 0;
+    background: var(--color-bg);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+  }
+
+  .project-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-light) 0%,
+      var(--color-primary) 100%
+    );
+  }
+
+  /* Image styling */
+  .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .project-card:hover .project-img {
+    transform: scale(1.1);
+  }
+
+  /* Fallback placeholder - hanya muncul jika gambar gagal load */
+  .image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    z-index: 0;
+  }
+
+  /* Sembunyikan placeholder jika gambar berhasil load */
+  .project-img:not([src=""]) ~ .image-placeholder {
+    display: none;
+  }
+
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .project-link {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+  }
+
+  .project-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-info h3 {
+    color: var(--color-text);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .project-description {
+    flex: 1;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    max-height: 120px;
+    padding-right: 5px;
+  }
+
+  /* Custom Scrollbar */
+  .project-description::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .project-description::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .project-description::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+  }
+
+  .project-card:hover .project-description::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+  }
+
+  .project-description::-webkit-scrollbar-thumb:hover {
+    background: #1e40af;
+  }
+
+  .project-description {
+    scrollbar-color: transparent transparent;
+  }
+
+  .project-card:hover .project-description {
+    scrollbar-color: #3b82f6 transparent;
+  }
+
+  .project-description p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    background: var(--color-bg);
+    color: var(--color-primary);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .project-card {
+      height: 450px;
+    }
+
+    .project-description {
+      max-height: 100px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .project-card {
+      height: 420px;
+    }
+
+    .projects {
+      padding: 80px 0;
+    }
+  }
+</style>

@@ -1,0 +1,641 @@
+---
+import BaseLayout from "../layouts/baselayout.astro";
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
+---
+
+<BaseLayout title="Home - Rizqi Dewanto Portfolio">
+  <Navbar />
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <p class="greeting">Hello, My Name Is</p>
+        <h1 class="name">RIZQI DEWANTO</h1>
+        <p class="tagline">
+          A junior developer with a strong interest in web development and data
+          handling. I enjoy building functional applications while also working
+          with databases, SQL, and data processing. Currently seeking an
+          internship opportunity in web development or data-related roles to
+          apply my skills, grow professionally, and contribute to a team.
+        </p>
+
+        <a href="/project" class="cta-button">Explore My Projects</a>
+      </div>
+      <div class="hero-image">
+        <div class="image-placeholder">
+          <img src="../public/images/profile.jpg" alt="Rizqi Dewanto Profile" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools & Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <p class="section-label">» My Expertise</p>
+      <h2 class="section-title">Tech Stack</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev" id="prevBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Frontend -->
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5"
+                class="tech-icon"
+              />
+              <span class="tech-name">HTML5</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3"
+                class="tech-icon"
+              />
+              <span class="tech-name">CSS3</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+                class="tech-icon"
+              />
+              <span class="tech-name">JavaScript</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+                class="tech-icon"
+              />
+              <span class="tech-name">TypeScript</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap"
+                class="tech-icon"
+              />
+              <span class="tech-name">Bootstrap</span>
+            </div>
+
+            <!-- Backend -->
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                alt="PHP"
+                class="tech-icon"
+              />
+              <span class="tech-name">PHP</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://laravel.com/img/logomark.min.svg"
+                alt="Laravel"
+                class="tech-icon"
+              />
+              <span class="tech-name">Laravel</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+                alt="RESTful API"
+                class="tech-icon"
+              />
+              <span class="tech-name">RESTful API</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js"
+                class="tech-icon"
+                style="filter: invert(1);"
+              />
+              <span class="tech-name">Next.js</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt="Java"
+                class="tech-icon"
+              />
+              <span class="tech-name">Java</span>
+            </div>
+
+            <!-- Mobile Development -->
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                alt="Flutter"
+                class="tech-icon"
+              />
+              <span class="tech-name">Flutter</span>
+            </div>
+
+            <!-- Database -->
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL"
+                class="tech-icon"
+              />
+              <span class="tech-name">MySQL</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                alt="SQL Server"
+                class="tech-icon"
+              />
+              <span class="tech-name">SQL Server</span>
+            </div>
+
+            <!-- Data Analysis -->
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+                class="tech-icon"
+              />
+              <span class="tech-name">Python</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png"
+                alt="Excel"
+                class="tech-icon"
+              />
+              <span class="tech-name">Excel</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://seeklogo.com/images/P/pentaho-logo-1ACDA1A0F9-seeklogo.com.png"
+                alt="Pentaho"
+                class="tech-icon"
+              />
+              <span class="tech-name">Pentaho</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/200px-New_Power_BI_Logo.svg.png"
+                alt="PowerBI"
+                class="tech-icon"
+              />
+              <span class="tech-name">PowerBI</span>
+            </div>
+
+            <!-- Version Control & Tools -->
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git"
+                class="tech-icon"
+              />
+              <span class="tech-name">Git</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                alt="GitHub"
+                class="tech-icon"
+                style="filter: invert(1);"
+              />
+              <span class="tech-name">GitHub</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="Visual Studio Code"
+                class="tech-icon"
+              />
+              <span class="tech-name">Visual Studio Code</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/200px-Google_Colaboratory_SVG_Logo.svg.png"
+                alt="Google Colab"
+                class="tech-icon"
+              />
+              <span class="tech-name">Google Colab</span>
+            </div>
+
+            <!-- Other Tools -->
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                alt="Figma"
+                class="tech-icon"
+              />
+              <span class="tech-name">Figma (UI Design)</span>
+            </div>
+            <div class="tech-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                alt="Postman"
+                class="tech-icon"
+              />
+              <span class="tech-name">Postman (API Testing)</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next" id="nextBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <script>
+    // Carousel functionality
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.getElementById("carouselTrack") as HTMLElement;
+      const prevBtn = document.getElementById("prevBtn") as HTMLElement;
+      const nextBtn = document.getElementById("nextBtn") as HTMLElement;
+      // Guard against missing elements
+      if (!track || !prevBtn || !nextBtn) return;
+      const items = track.children;
+      const itemWidth = 180; // 150px width + 30px gap
+      let currentIndex = 0;
+      const totalItems = items.length;
+      const parentWidth = track.parentElement
+        ? track.parentElement.offsetWidth
+        : track.offsetWidth;
+      const visibleItems = Math.floor(parentWidth / itemWidth) || 1;
+      const maxIndex = Math.max(0, totalItems - visibleItems);
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        prevBtn.classList.toggle("disabled", currentIndex === 0);
+        nextBtn.classList.toggle("disabled", currentIndex >= maxIndex);
+      }
+
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      // ensure initial index is in valid range
+      currentIndex = Math.min(Math.max(currentIndex, 0), maxIndex);
+      updateCarousel();
+    });
+  </script>
+
+  <style>
+    /* Hero Section */
+    .hero {
+      padding: 150px 0 100px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--color-surface);
+    }
+
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .greeting {
+      color: var(--color-primary);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .name {
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        var(--color-primary-dark) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      color: var(--color-text-secondary);
+      font-size: 1.15rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    }
+
+    .cta-button:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-placeholder {
+      width: 400px;
+      height: 500px;
+      background: linear-gradient(
+        135deg,
+        var(--color-primary-light) 0%,
+        var(--color-primary) 100%
+      );
+      border: 3px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image-placeholder::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    .image-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-placeholder p {
+      color: white;
+      font-weight: 600;
+      letter-spacing: 2px;
+      z-index: 1;
+    }
+    .profile-image {
+      width: 400px; /* sesuaikan */
+      height: 500px; /* sesuaikan */
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid var(--color-border);
+      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.12);
+    }
+    @media (max-width: 640px) {
+      .profile-image {
+        width: 100%;
+        height: 400px;
+      }
+    }
+
+    /* Skills Section */
+    .skills {
+      padding: 100px 0;
+      background: var(--color-bg);
+    }
+
+    .section-label {
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--color-text);
+      margin-bottom: 50px;
+      background: linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        var(--color-primary-dark) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .carousel-container {
+      position: relative;
+      padding: 0 60px;
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 30px;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tech-item {
+      flex: 0 0 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      background: var(--color-surface);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .tech-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    }
+
+    .tech-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-item:hover .tech-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .tech-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      text-align: center;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        var(--color-primary-dark) 100%
+      );
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .carousel-btn:hover {
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+    }
+
+    .carousel-btn:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    .carousel-btn.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .carousel-btn.disabled:hover {
+      transform: translateY(-50%) scale(1);
+    }
+
+    .carousel-btn.prev {
+      left: 0;
+    }
+
+    .carousel-btn.next {
+      right: 0;
+    }
+
+    .carousel-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+
+      .name {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 32px;
+      }
+
+      .carousel-container {
+        padding: 0 50px;
+      }
+
+      .tech-item {
+        flex: 0 0 120px;
+      }
+
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .name {
+        font-size: 2.5rem;
+      }
+
+      .hero {
+        padding: 120px 0 80px;
+      }
+
+      .skills {
+        padding: 80px 0;
+      }
+
+      .image-placeholder {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  </style>
+</BaseLayout>
