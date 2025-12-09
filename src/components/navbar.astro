@@ -4,12 +4,46 @@
 
 <nav class="navbar">
   <div class="container nav-container">
+    <!-- Logo -->
     <div class="logo">RD</div>
 
-    <!-- Toggle Button (Mobile) -->
-    <div class="menu-toggle" id="mobile-menu">☰</div>
+    <!-- Desktop Navigation -->
+    <ul class="nav-links">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/about">ABOUT ME</a></li>
+      <li><a href="/project">PROJECTS</a></li>
+    </ul>
 
-    <ul class="nav-links" id="nav-links">
+    <!-- Right Section: Theme Toggle + Mobile Menu -->
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      
+      <button class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <ul class="mobile-nav-links">
       <li><a href="/">HOME</a></li>
       <li><a href="/about">ABOUT ME</a></li>
       <li><a href="/project">PROJECTS</a></li>
@@ -22,11 +56,11 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     padding: 1.5rem 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .nav-container {
@@ -35,69 +69,274 @@
     align-items: center;
   }
 
+  /* Logo */
   .logo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--color-text);
     letter-spacing: 2px;
+    z-index: 10;
   }
 
+  /* Desktop Navigation */
   .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
     list-style: none;
+    margin: 0;
   }
 
   .nav-links a {
-    color: #b0b0b0;
+    color: var(--color-text-secondary);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1px;
     transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
   }
 
   .nav-links a:hover {
-    color: #fff;
+    color: var(--color-text);
   }
 
-  /* MOBILE MODE */
-  @media (max-width: 640px) {
-    .menu-toggle {
-      display: block;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-    }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
 
+  /* Right Actions Section */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+  }
+
+  /* Theme Toggle - Minimalist Design */
+  .theme-toggle {
+    background: transparent;
+    border: 1.5px solid var(--color-border);
+    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--color-primary);
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  .theme-toggle svg {
+    position: absolute;
+    color: var(--color-text);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark Mode (default) - Show Moon */
+  .sun-icon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+  }
+
+  .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  /* Light Mode - Show Sun */
+  [data-theme="light"] .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  [data-theme="light"] .moon-icon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+  }
+
+  /* Subtle pulse on theme change */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  .theme-toggle.pulse {
+    animation: pulse 0.4s ease;
+  }
+
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 42px;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background: var(--color-text);
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-toggle:hover span {
+    background: var(--color-primary);
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Mobile Menu Overlay */
+  .mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: var(--nav-menu-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 2rem 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu-overlay.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+
+  .mobile-nav-links a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .mobile-nav-links a:hover {
+    color: var(--color-text);
+    padding-left: 1rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
     .nav-links {
       display: none;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      background: rgba(20, 20, 20, 0.95);
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 1.5rem 2rem;
-      border-radius: 10px;
     }
 
-    .nav-links.show {
+    .menu-toggle {
       display: flex;
     }
   }
 
-  .menu-toggle {
-    display: none;
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.3rem;
+    }
+
+    .theme-toggle {
+      width: 38px;
+      height: 38px;
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 </style>
 
 <script>
+  // Load saved theme immediately
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+
+  // Mobile menu toggle
   const menuBtn = document.getElementById("mobile-menu");
-  const navLinks = document.getElementById("nav-links");
-  if (menuBtn && navLinks) {
+  const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+  
+  if (menuBtn && mobileMenuOverlay) {
     menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
+      menuBtn.classList.toggle("active");
+      mobileMenuOverlay.classList.toggle("show");
+    });
+
+    // Close menu when clicking on a link
+    const mobileLinks = mobileMenuOverlay.querySelectorAll("a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menuBtn.classList.remove("active");
+        mobileMenuOverlay.classList.remove("show");
+      });
+    });
+  }
+
+  // Theme toggle with pulse animation
+  const themeToggle = document.getElementById("theme-toggle");
+  
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute("data-theme") || "dark";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+
+      // Add pulse animation
+      themeToggle.classList.add("pulse");
+      setTimeout(() => themeToggle.classList.remove("pulse"), 400);
     });
   }
 </script>
